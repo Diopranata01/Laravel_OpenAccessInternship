@@ -1,3 +1,3 @@
-# Laravel Maintanance App Repository
+# Laravel Maintanance CRUD App Repository
 
 ## Welcome, happy coding!
