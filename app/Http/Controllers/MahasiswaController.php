@@ -33,6 +33,7 @@ class MahasiswaController extends Controller
         $data= $request->all();
 
         $this->mahasiswa->createMahasiswa($data);
+        
         return redirect('/mahasiswas');
     }
 }
