@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Repository\IMahasiswaRepository;
 use Illuminate\Http\Request;
+use SweetAlert;
 
 class MahasiswaController extends Controller
 {
