@@ -19,6 +19,5 @@ class MahasiswaRepository implements IMahasiswaRepository{
             'name' => $data['name'],
             'fakultas' => $data['fakultas']
         ]);
-
     }
 }
