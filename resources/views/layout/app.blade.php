@@ -11,6 +11,7 @@
 <body>
     
     @yield('content')
+    @yield('content2')
     
 </body>
 </html>

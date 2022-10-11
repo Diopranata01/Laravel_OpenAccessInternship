@@ -7,6 +7,15 @@
 
     <main class="container">
        <!-- AWAL FORM -->
+            @if (session('alert'))
+                <div class="alert alert-success m-3">
+                    {{ session('alert') }}
+                </div>
+            @elseif(session('alert-delete'))
+                <div class="alert alert-danger m-3">
+                    {{ session('alert-delete') }}
+                </div>
+           @endif
             <form action="{{ route('mahasiswas.store') }}" method='POST' enctype="multipart/form-data">
                 @csrf
 
@@ -19,26 +28,35 @@
                         </div>
                         <label for="nim" class="col-sm-2 col-form-label">NIM</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name='nim' id="nim">
+                            <input type="number" class="form-control @error('nim') is-invalid @enderror" name='nim' id="nim">
+                            @error('nim')
+                                <div class="alert alert-danger">Silahkan isi!</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="name" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='name' id="name">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" name='name' id="name">
+                            @error('name')
+                                <div class="alert alert-danger">Silahkan isi!</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="fakultas" class="col-sm-2 col-form-label">Fakultas</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='fakultas' id="fakultas">
+                            <input type="text" class="form-control @error('fakultas') is-invalid @enderror" name='fakultas' id="fakultas">
+                            @error('fakultas')
+                                <div class="alert alert-danger">Silahkan isi!</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <div class="col-6 m-3 ms-5 d-flex justify-content-end"><button type="submit" class="btn btn-primary " name="submit">SIMPAN</button></div>
                     </div>
-                </form>
-        </div>
+                </div>
+            </form>
         <!-- AKHIR FORM -->
         
         <!-- START DATA -->
@@ -72,15 +90,15 @@
                         </tr>
                     </thead>
                     <tbody class="bg-light">
-                        @foreach($mahasiswas as $mahasiswa)
+                        @foreach($mahasiswas as $key => $mahasiswa)
                         <tr>
                             <td>{{ $mahasiswa->id }}.</td>
                             <td>{{ $mahasiswa->name }}</td>
                             <td>{{ $mahasiswa->nim }}</td>
                             <td>{{ $mahasiswa->fakultas }}</td>
                             <td>
-                                <a href='' class="btn btn-primary btn-sm">Edit</a>
-                                <a href='' class="btn btn-danger btn-sm">Del</a>
+                                <a href='{{ route('mahasiswas.view', $mahasiswa->id)}}' class="btn btn-primary btn-sm">Edit</a>
+                                <a href='{{ route('mahasiswas.delete', $mahasiswa->id)}}' class="btn btn-danger btn-sm">Del</a>
                             </td>
                         </tr>
                         @endforeach

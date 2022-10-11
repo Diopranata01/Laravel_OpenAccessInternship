@@ -22,3 +22,9 @@ Route::get('/mahasiswas',[MahasiswaController::class, 'index'])->name('mahasiswa
 
 //menuju mahasiswa/store, dengan function store untuk memasukan data
 Route::post('/mahasiswas/store',[MahasiswaController::class, 'store'])->name('mahasiswas.store');
+
+Route::get('/mahasiswas/view/{id}',[MahasiswaController::class, 'view'])->name('mahasiswas.view');
+
+Route::get('/mahasiswas/update/{id}',[MahasiswaController::class, 'update'])->name('mahasiswas.update');
+
+Route::get('/mahasiswas/delete/{id}',[MahasiswaController::class, 'deleted'])->name('mahasiswas.delete');

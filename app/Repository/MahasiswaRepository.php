@@ -21,4 +21,25 @@ class MahasiswaRepository implements IMahasiswaRepository{
         ]);
 
     }
+
+    public function get($id){
+        return Mahasiswa::find($id);
+    }
+
+    public function editMahasiswa($id, $data){
+
+        $mahasiswa = Mahasiswa::find($id);
+
+        $mahasiswa->name = $data['name'];
+        $mahasiswa->nim = $data['nim'];
+        $mahasiswa->fakultas = $data['fakultas'];
+
+        return $mahasiswa->save();
+        
+    }
+
+    public function deleteMahasiswa($id){
+        return Mahasiswa::find($id)->delete();
+    }
+
 }
