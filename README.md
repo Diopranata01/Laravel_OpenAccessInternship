@@ -2,4 +2,4 @@
 
 ## Welcome to maintanance branch!
 
-### Feel free to clone the crud repository, happy coding!
+- Feel free to clone the crud repository, happy coding!
