@@ -13,10 +13,12 @@ class MahasiswaRepository implements IMahasiswaRepository{
 
     public function createMahasiswa(array $data){
 
-        //$mahasiswa = new Mahasiswa();
-        //Sampe sini belum
+        // bisa sprt ini $mahasiswa = new Mahasiswa();
         Mahasiswa::insert([
-            'nim' => $data['']
+            'nim' => $data['nim'], //request dari store function
+            'name' => $data['name'],
+            'fakultas' => $data['fakultas']
         ]);
+
     }
 }

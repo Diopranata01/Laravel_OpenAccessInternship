@@ -19,3 +19,6 @@ Route::get('/', function () {
 });
 
 Route::get('/mahasiswas',[MahasiswaController::class, 'index'])->name('mahasiswas.index');
+
+//menuju mahasiswa/store, dengan function store untuk memasukan data
+Route::post('/mahasiswas/store',[MahasiswaController::class, 'store'])->name('mahasiswas.store');
