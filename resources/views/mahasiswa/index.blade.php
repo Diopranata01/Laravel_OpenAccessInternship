@@ -50,6 +50,7 @@
                             @error('fakultas')
                                 <div class="alert alert-danger">Silahkan isi!</div>
                             @enderror
+                            
                         </div>
                     </div>
                     <div class="mb-3 row">
