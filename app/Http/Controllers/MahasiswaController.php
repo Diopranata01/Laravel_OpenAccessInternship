@@ -18,7 +18,7 @@ class MahasiswaController extends Controller
     public function index(){
         //
         $mahasiswas = $this->mahasiswa->getAllMahasiswa();
-        return view('mahasiswa.index')->with('mahasiswas', $mahasiswas);
+        return view('mahasiswa.index', ['title'=>'Home'])->with('mahasiswas', $mahasiswas);
     }
 
     public function store(Request $request){
