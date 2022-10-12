@@ -19,19 +19,31 @@
                     <div class="mb-3 row">
                         <label for="nim" class="col-sm-2 col-form-label">NIM</label>
                         <div class="col-sm-10">
-                            <input type="number" class="form-control" name='nim' id="nim" value="{{ $mahasiswas->nim }}">
+                            <input type="number" class="form-control @error('nim') is-invalid @enderror" name='nim' id="nim" value="{{ $mahasiswas->nim }}">
+                            @error('nim')
+                                <div class="alert alert-danger">Silahkan masukan! *( terdiri dari angka '1-9', minimal 10 karakter, dan tidak terdiri dari
+                                    karakter spesial!)</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="name" class="col-sm-2 col-form-label">Nama</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='name' id="name" value="{{ $mahasiswas->name }}">
+                            <input type="text" class="form-control @error('name') is-invalid @enderror" name='name' id="name" value="{{ $mahasiswas->name }}">
+                            @error('name')
+                                <div class="alert alert-danger">Silahkan masukan! *( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 6 karakter, dan tidak terdiri dari
+                                    karakter spesial!)</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
                         <label for="fakultas" class="col-sm-2 col-form-label">Fakultas</label>
                         <div class="col-sm-10">
-                            <input type="text" class="form-control" name='fakultas' id="fakultas" value="{{ $mahasiswas->fakultas }}">
+                            <input type="text" class="form-control @error('fakultas') is-invalid @enderror" name='fakultas' id="fakultas" value="{{ $mahasiswas->fakultas }}">
+                            @error('fakultas')
+                                <div class="alert alert-danger">Silahkan masukan! *( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 3 karakter, dan tidak terdiri dari
+                                    karakter spesial!)</div>
+                            @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">

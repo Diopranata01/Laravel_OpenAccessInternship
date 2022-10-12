@@ -26,7 +26,7 @@ class MahasiswaController extends Controller
         $request -> validate([
             'nim' => 'required|regex:/^([0-9]*)$/|min:10',
             'name' => 'required|regex:/^([A-Za-z ]*)$/|min:10',
-            'fakultas' => 'required'
+            'fakultas' => 'required|regex:/^([A-Za-z ]*)$/|min:3'
         ]);
 
         //ambil data dari index, validasi, dan createMahasiswa
@@ -46,7 +46,15 @@ class MahasiswaController extends Controller
 
     public function update($id, Request $request){
         //insert update
-        $this->mahasiswa->editMahasiswa($id, $request);
+        $request -> validate([
+            'nim' => 'required|regex:/^([0-9]*)$/|min:10',
+            'name' => 'required|regex:/^([A-Za-z ]*)$/|min:6',
+            'fakultas' => 'required|regex:/^([A-Za-z ]*)$/|min:3'
+        ]);
+
+        $data= $request->all();
+
+        $this->mahasiswa->editMahasiswa($id, $data);
         return redirect('/mahasiswas')->with('alert','Berhasil Di Update!');
 
     }

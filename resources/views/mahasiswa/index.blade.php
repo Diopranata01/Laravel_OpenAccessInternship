@@ -26,29 +26,38 @@
                                 Input Data Mahasiswa
                             </h3>
                         </div>
-                        <label for="nim" class="col-sm-2 col-form-label">NIM</label>
+                        <label for="nim" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 8vw">NIM</label>
                         <div class="col-sm-10">
                             <input type="number" class="form-control @error('nim') is-invalid @enderror" name='nim' id="nim">
+                            <p class="text-primary" style="font-size: 12px">*(terdiri dari angka '1-9', minimal 10 karakter, dan tidak terdiri dari
+                                karakter spesial!)</p>
                             @error('nim')
-                                <div class="alert alert-danger">Silahkan isi!</div>
+                                <div class="alert alert-danger">Silahkan ulangi masukan! *( terdiri dari angka '1-9', minimal 10 karakter, dan tidak terdiri dari
+                                    karakter spesial!)</div>
                             @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="name" class="col-sm-2 col-form-label">Nama</label>
+                        <label for="name" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 8vw">Nama</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control @error('name') is-invalid @enderror" name='name' id="name">
+                            <p class="text-primary" style="font-size: 12px">*( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 6 karakter, dan tidak terdiri dari
+                                karakter spesial!)</p>
                             @error('name')
-                                <div class="alert alert-danger">Silahkan isi!</div>
+                                <div class="alert alert-danger">Silahkan masukan! *( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 6 karakter, dan tidak terdiri dari
+                                    karakter spesial!)</div>
                             @enderror
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="fakultas" class="col-sm-2 col-form-label">Fakultas</label>
+                        <label for="fakultas" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 8vw">Fakultas</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control @error('fakultas') is-invalid @enderror" name='fakultas' id="fakultas">
+                            <p class="text-primary" style="font-size: 12px">*( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 3 karakter, dan tidak terdiri dari
+                                karakter spesial!)</p>
                             @error('fakultas')
-                                <div class="alert alert-danger">Silahkan isi!</div>
+                                <div class="alert alert-danger">Silahkan masukan! *( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 3 karakter, dan tidak terdiri dari
+                                    karakter spesial!)</div>
                             @enderror
                         </div>
                     </div>
