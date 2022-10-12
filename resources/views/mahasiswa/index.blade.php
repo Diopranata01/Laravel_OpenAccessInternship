@@ -50,7 +50,6 @@
                             @error('fakultas')
                                 <div class="alert alert-danger">Silahkan isi!</div>
                             @enderror
-                            
                         </div>
                     </div>
                     <div class="mb-3 row">
@@ -84,9 +83,9 @@
                     <thead>
                         <tr>
                             <th class="col-md-1">No</th>
-                            <th class="col-md-3">NIM</th>
+                            <th class="col-md-2">NIM</th>
                             <th class="col-md-4">Nama</th>
-                            <th class="col-md-2">Fakultas</th>
+                            <th class="col-md-3">Fakultas</th>
                             <th class="col-md-2">Aksi</th>
                         </tr>
                     </thead>
@@ -94,8 +93,8 @@
                         @foreach($mahasiswas as $key => $mahasiswa)
                         <tr>
                             <td>{{ $mahasiswa->id }}.</td>
-                            <td>{{ $mahasiswa->name }}</td>
                             <td>{{ $mahasiswa->nim }}</td>
+                            <td>{{ $mahasiswa->name }}</td>
                             <td>{{ $mahasiswa->fakultas }}</td>
                             <td>
                                 <a href='{{ route('mahasiswas.view', $mahasiswa->id)}}' class="btn btn-primary btn-sm">Edit</a>
