@@ -18,7 +18,6 @@
            @endif
             <form action="{{ route('mahasiswas.store') }}" method='POST' enctype="multipart/form-data">
                 @csrf
-
                 <div class="my-3 p-3 bg-body rounded shadow-sm">
                     <div class="mb-3 row">
                         <div class="card-header text-dark border-3 border-bottom mb-4 mt-2">
@@ -107,8 +106,12 @@
                             <td>{{ $mahasiswa->fakultas }}</td>
                             <td>
                                 <a href='{{ route('mahasiswas.view', $mahasiswa->id)}}' class="btn btn-primary btn-sm">Edit</a>
-                                <a href='{{ route('mahasiswas.delete', $mahasiswa->id)}}' class="btn btn-warning btn-sm text-dark">Del</a>
-                            </td>
+                                <form action='{{ route('mahasiswas.delete', $mahasiswa->id)}}' class="" method='POST'>
+                                    @method('DELETE')
+                                    @csrf
+                                    <button type="submit" class="btn btn-warning" name="submit">Del</button>
+                                </form>
+                            </td> 
                         </tr>
                         @endforeach
                     </tbody>

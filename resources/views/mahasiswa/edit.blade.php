@@ -4,7 +4,8 @@
 
     <body class="bg-light">
         <main class="container">
-            <form action="{{ route('mahasiswas.update', $mahasiswas->id) }}" method='PUT' enctype="multipart/form-data">
+            <form action="{{ route('mahasiswas.update', $mahasiswas->id) }}" method='POST' enctype="multipart/form-data">
+                @method('PUT')
                 @csrf
                 <div class="my-3 p-3 bg-body rounded shadow-sm">
                     <div class="mb-3 row">

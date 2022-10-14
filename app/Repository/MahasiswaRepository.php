@@ -5,8 +5,7 @@ interface MahasiswaRepository{
 
     public function getAllMahasiswa();
 
-    //create and take in the array of data
-    public function createMahasiswa(array $data);
+    public function createMahasiswa($data);
 
     public function get($id);
     

@@ -3,8 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Repository\EloquentMahasiswaRepository;
-use Illuminate\Http\Request;
-use SweetAlert;
+use App\Http\Request\MhsRequest;
 
 class MahasiswaController extends Controller
 {
@@ -21,18 +20,12 @@ class MahasiswaController extends Controller
         return view('mahasiswa.index', ['title'=>'Home'])->with('mahasiswas', $mahasiswas);
     }
 
-    public function store(Request $request){
+    public function store(MhsRequest $request){
         //
-        $request -> validate([
-            'nim' => 'required|regex:/^([0-9]*)$/|min:10',
-            'name' => 'required|regex:/^([A-Za-z ]*)$/|min:10',
-            'fakultas' => 'required|regex:/^([A-Za-z ]*)$/|min:3'
-        ]);
+        // return 1;
+        $validateData = $request->validated();
 
-        //ambil data dari index, validasi, dan createMahasiswa
-        $data= $request->all();
-
-        $this->mahasiswa->createMahasiswa($data);
+        $this->mahasiswa->createMahasiswa($validateData);
         return redirect('/mahasiswas')->with('alert', 'Berhasil Ditambahkan!');
         
     }
@@ -44,17 +37,11 @@ class MahasiswaController extends Controller
         
     }
 
-    public function update($id, Request $request){
+    public function update($id, MhsRequest $request){
         //insert update
-        $request -> validate([
-            'nim' => 'required|regex:/^([0-9]*)$/|min:10',
-            'name' => 'required|regex:/^([A-Za-z ]*)$/|min:6',
-            'fakultas' => 'required|regex:/^([A-Za-z ]*)$/|min:3'
-        ]);
+        $validateData= $request->validated(); 
 
-        $data= $request->all();
-
-        $this->mahasiswa->editMahasiswa($id, $data);
+        $this->mahasiswa->editMahasiswa($id, $validateData);
         return redirect('/mahasiswas')->with('alert','Berhasil Di Update!');
 
     }
