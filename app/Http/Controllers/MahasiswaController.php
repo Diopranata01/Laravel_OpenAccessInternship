@@ -2,7 +2,7 @@
 
 namespace App\Http\Controllers;
 
-use App\Repository\IMahasiswaRepository;
+use App\Repository\EloquentMahasiswaRepository;
 use Illuminate\Http\Request;
 use SweetAlert;
 
@@ -10,7 +10,7 @@ class MahasiswaController extends Controller
 {
     public $mahasiswa;
 
-    public function __construct(IMahasiswaRepository $imahasiswa){
+    public function __construct(EloquentMahasiswaRepository $imahasiswa){
 
         $this->mahasiswa = $imahasiswa;
     }

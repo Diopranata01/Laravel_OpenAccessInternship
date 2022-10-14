@@ -2,8 +2,7 @@
 
 namespace App\Providers;
 
-use App\Repository\IMahasiswaRepository;
-use App\Repository\MahasiswaRepositoruy;
+use App\Repository\EloquentMahasiswaRepository;
 use App\Repository\MahasiswaRepository;
 use Illuminate\Support\ServiceProvider;
 
@@ -16,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        $this->app->bind(IMahasiswaRepository::class, MahasiswaRepository::class);
+        $this->app->bind(MahasiswaRepository::class, EloquentMahasiswaRepository::class);
     }
 
     /**

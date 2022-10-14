@@ -12,14 +12,14 @@
                     <a class="nav-link" aria-current="page" href="#">Home</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link {{ $title ? 'active' : '' }}" href="/mahasiswas">Data</a>
+                    <a class="nav-link {{ @$title ? 'active' : '' }}" href="/mahasiswas">Data</a>
                 </li>
                 <li class="nav-item pe-4">
-                    <a class="nav-link" href="#">Pricing</a>
+                    <a class="nav-link" href="#">About</a>
                 </li>
                 <li class="nav-item dropdown pe-4">
                     <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                    Dropdown link
+                    Assets
                     </a>
                     <ul class="dropdown-menu">
                     <li><a class="dropdown-item" href="#">Action</a></li>
