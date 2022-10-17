@@ -1,12 +1,13 @@
 <?php
 namespace App\Repository;
 
-use App\Models\Mahasiswa;
+interface MahasiswaRepository{
 
-class MahasiswaRepository implements IMahasiswaRepository{
+    public function getAllMahasiswa();
 
-    public function getAllMahasiswa(){
+    public function createMahasiswa($data);
 
+<<<<<<< HEAD
         //changes 1, get the db into the repository Mahasiswa Model
         return Mahasiswa::latest()-> get();
     }
@@ -20,4 +21,12 @@ class MahasiswaRepository implements IMahasiswaRepository{
             'fakultas' => $data['fakultas']
         ]);
     }
+=======
+    public function get($id);
+    
+    public function editMahasiswa($id, $data);
+    
+    public function deleteMahasiswa($id);
+    
+>>>>>>> main_testing2
 }

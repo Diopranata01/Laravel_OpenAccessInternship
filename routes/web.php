@@ -18,7 +18,14 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-Route::get('/mahasiswas',[MahasiswaController::class, 'index'])->name('mahasiswas.index');
+Route::controller(MahasiswaController::class)-> group(function (){
+    Route::get('/mahasiswas','index')->name('mahasiswas.index');
 
-//menuju mahasiswa/store, dengan function store untuk memasukan data
-Route::post('/mahasiswas/store',[MahasiswaController::class, 'store'])->name('mahasiswas.store');
+    Route::post('/mahasiswas/store','store')->name('mahasiswas.store');
+    
+    Route::get('/mahasiswas/view/{id}','view')->name('mahasiswas.view');
+    
+    Route::put('/mahasiswas/update/{id}','update')->name('mahasiswas.update');
+    
+    Route::delete('/mahasiswas/delete/{id}','deleted')->name('mahasiswas.delete');
+});
