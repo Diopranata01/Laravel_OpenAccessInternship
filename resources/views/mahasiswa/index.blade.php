@@ -93,11 +93,11 @@
                             <td>{{ $mahasiswa->name }}</td>
                             <td>{{ $mahasiswa->fakultas }}</td>
                             <td>
-                                <a href='{{ route('mahasiswas.view', $mahasiswa->id)}}' class="btn btn-primary btn-sm">Edit</a>
+                                <a href='{{ route('mahasiswas.view', $mahasiswa->id)}}' class="btn btn-primary btn-sm pb-2 pt-2" >Edit</a>
                                 <form action='{{ route('mahasiswas.delete', $mahasiswa->id)}}' class="" method='POST'>
                                     @method('DELETE')
                                     @csrf
-                                    <button type="submit" class="btn btn-warning" name="submit">Del</button>
+                                    <button type="submit" class="btn btn-warning" style="width: 3vw;" name="submit">Del</button>
                                 </form>
                             </td> 
                         </tr>
