@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
 
 <p align="center">
@@ -62,3 +63,12 @@ If you discover a security vulnerability within Laravel, please send an e-mail t
 ## License
 
 The Laravel framework is open-sourced software licensed under the [MIT license](https://opensource.org/licenses/MIT).
+=======
+# Main Testing Area 2
+
+## CRUD
+
+1. Aplikasi nya masih dalam development, masih banyak kurang, 
+harus ditambah dan belajar lagi, semangat!
+
+>>>>>>> 5f2c9e4c770ad4174878d37215b618b38cfc6ef3
