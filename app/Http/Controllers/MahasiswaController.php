@@ -37,11 +37,6 @@ class MahasiswaController extends Controller
         
     }
 
-<<<<<<< HEAD
-        $this->mahasiswa->createMahasiswa($data);
-        
-        return redirect('/mahasiswas');
-=======
     public function update($id, MhsRequest $request){
         //insert update
         $validateData= $request->validated(); 
@@ -56,6 +51,5 @@ class MahasiswaController extends Controller
         $this->mahasiswa->deleteMahasiswa($id);
         // return redirect()->route('mahasiswa.index')->with('alert','Data Di Hapus!');
         return redirect('/mahasiswas')->with('alert-delete','Data Di Hapus!');
->>>>>>> main_testing1
     }
 }
