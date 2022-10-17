@@ -28,7 +28,6 @@ class EloquentMahasiswaRepository implements MahasiswaRepository{
         // $mahasiswa->fakultas = $data['fakultas'];
 
         // return $mahasiswa->save();
-        
     }
 
     public function deleteMahasiswa($id){
