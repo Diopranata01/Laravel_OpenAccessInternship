@@ -1,6 +1,6 @@
 <div class="row">
     <div class="col"></div>
-        <nav class="navbar navbar-expand-lg bg-secondary col-md-8 navbar-dark border rounded-bottom">
+        <nav class="navbar navbar-expand-lg bg-secondary col-md-7 navbar-dark border rounded-bottom">
             <div class="container-fluid">
             <a class="navbar-brand ms-4 fs-3" href="/">I MISS YO UNUD</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">

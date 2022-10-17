@@ -18,14 +18,14 @@
            @endif
             <form action="{{ route('mahasiswas.store') }}" method='POST' enctype="multipart/form-data">
                 @csrf
-                <div class="my-3 p-3 bg-body rounded shadow-sm">
+                <div class="my-3 p-3 m-3 bg-body rounded shadow-sm">
                     <div class="mb-3 row">
                         <div class="card-header text-dark border-3 border-bottom mb-4 mt-2">
                             <h3 class="mb-4 ms-3">
                                 Input Data Mahasiswa
                             </h3>
                         </div>
-                        <label for="nim" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 8vw">NIM</label>
+                        <label for="nim" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 7vw">NIM</label>
                         <div class="col-sm-10">
                             <input type="number" class="form-control @error('nim') is-invalid @enderror" name='nim' id="nim">
                             <p class="text-primary" style="font-size: 13px">*(terdiri dari angka '1-9', minimal 10 karakter, dan tidak terdiri dari
@@ -37,7 +37,7 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="name" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 8vw">Nama</label>
+                        <label for="name" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 7vw">Nama</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control @error('name') is-invalid @enderror" name='name' id="name">
                             <p class="text-primary" style="font-size: 13px">*( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 6 karakter, dan tidak terdiri dari
@@ -49,7 +49,7 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-                        <label for="fakultas" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 8vw">Fakultas</label>
+                        <label for="fakultas" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 7vw">Fakultas</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control @error('fakultas') is-invalid @enderror" name='fakultas' id="fakultas">
                             <p class="text-primary" style="font-size: 13px">*( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 3 karakter, dan tidak terdiri dari
@@ -68,7 +68,7 @@
         <!-- AKHIR FORM -->
         
         <!-- START DATA -->
-        <div class="my-3 p-3 bg-body rounded shadow-sm">
+        <div class="my-3 p-3 m-3 bg-body rounded shadow-sm">
                 <!-- FORM PENCARIAN -->
                 {{-- <div class="pb-3">
                   <form class="d-flex" action="" method="get">
