@@ -22,7 +22,6 @@ class EloquentMahasiswaRepository implements MahasiswaRepository{
 
         Mahasiswa::where('id', $id)->update($data);
         // $mahasiswa = Mahasiswa::find($id);
-
         // $mahasiswa->name = $data['name'];
         // $mahasiswa->nim = $data['nim'];
         // $mahasiswa->fakultas = $data['fakultas'];
