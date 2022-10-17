@@ -43,11 +43,6 @@
                         </div>
                     </div>
                     <div class="mb-3 row">
-<<<<<<< HEAD
-                        <label for="name" class="col-sm-2 col-form-label">Nama</label>
-                        <div class="col-sm-10">
-                            <input type="text" class="form-control" name='name' id="name">
-=======
                         <label for="name" class="col-sm-2 col-form-label fs-5 ms-5 me-2" style="width: 8vw">Nama</label>
                         <div class="col-sm-10">
                             <input type="text" class="form-control @error('name') is-invalid @enderror" name='name' id="name">
@@ -57,7 +52,6 @@
                                 <div class="alert alert-danger">Silahkan masukan! *( terdiri dari huruf besar 'A-Z', dan huruf kecil 'a-z', minimal 6 karakter, dan tidak terdiri dari
                                     karakter spesial!)</div>
                             @enderror
->>>>>>> 5f2c9e4c770ad4174878d37215b618b38cfc6ef3
                         </div>
                     </div>
                     <div class="mb-3 row">
