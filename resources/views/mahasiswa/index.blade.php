@@ -70,7 +70,6 @@
         <!-- START DATA -->
         <div class="my-3 p-3 m-3 bg-body rounded shadow-sm">
                 <!-- FORM PENCARIAN -->
-          
                 <table class="table table-striped">
                     <div class="card-header text-dark border-3 border-bottom mb-4 mt-2">
                         <h3 class="ms-2 mb-4">
